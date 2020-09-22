@@ -13,15 +13,15 @@ function reConstructBinaryTree(pre, vin) {
     }
 
     const rootVal = pre[0];
-    const node = new TreeNode(rootVal);
+    const node = TreeNode(rootVal);
 
-    let i = 0;
+    let i =0;
     for(i;i<vin.length;i++){
         if(vin[i]==rootVal){
             break;
         }
     }
-    node.left  = reConstructBinaryTree(pre.slice(1,i+1),vin.slice(0,i));
-    node.right = reConstructBinaryTree(pre.slice(i+1,pre.length),vin.slice(i+1,vin.length));
-    return node;
+
+    node.left = reConstructBinaryTree(pre.slice(1,i+1),vin.slice(0,i));
+    node.right = 
 }
